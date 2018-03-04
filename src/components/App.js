@@ -23,12 +23,14 @@ export default class App extends Component {
   };
 
   render() {
-    console.log(this.state.video);
     return (
       <main>
         <VideoSearch onVideoSearch={this.onVideoSearch} />
-        <Video />
-        <VideoResults />
+        <Video video={this.state.video} />
+        <VideoResults
+          videos={this.state.videos}
+          onVideoSelect={video => this.setState({ video })}
+        />
       </main>
     );
   }
