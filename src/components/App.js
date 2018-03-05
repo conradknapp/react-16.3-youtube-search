@@ -13,6 +13,10 @@ export default class App extends Component {
     videos: []
   };
 
+  componentDidMount() {
+    this.onVideoSearch("wes bos");
+  }
+
   onVideoSearch = term => {
     YTSearch({ key: API_KEY, term }, videos => {
       this.setState({

@@ -8,11 +8,10 @@ const Video = ({ video }) => {
   const videoId = video.id.videoId;
   const url = `https://www.youtube.com/embed/${videoId}`;
   return (
-    <section>
+    <React.Fragment>
       <iframe src={url} />
       <p>{video.snippet.title}</p>
-      <p>{video.snippet.url}</p>
-    </section>
+    </React.Fragment>
   );
 };
 

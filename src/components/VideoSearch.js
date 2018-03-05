@@ -8,9 +8,10 @@ class VideoSearch extends React.Component {
     query: ""
   };
 
-  onSearch = () => {
+  onSearch = event => {
     const { onVideoSearch } = this.props;
     const { value: query } = this.searchInput.value;
+
     this.setState({ query });
     if (this.state.query) {
       onVideoSearch(this.state.query);
